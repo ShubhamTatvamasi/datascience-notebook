@@ -6,6 +6,11 @@ kubectl create deployment datascience-notebook --image=jupyter/datascience-noteb
 kubectl expose deployment datascience-notebook --port=8888 --name=datascience-notebook
 ```
 
+Get token:
+```bash
+kubectl logs deploy/datascience-notebook | grep token
+```
+
 Delete everything:
 ```bash
 kubectl delete \
