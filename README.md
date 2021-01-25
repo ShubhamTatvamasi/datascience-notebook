@@ -26,6 +26,8 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: datascience-notebook
+  annotations:
+    nginx.org/websocket-services: datascience-notebook
 spec:
   tls:
     - hosts:
