@@ -28,11 +28,12 @@ metadata:
   name: datascience-notebook
   annotations:
     nginx.org/websocket-services: datascience-notebook
+    cert-manager.io/cluster-issuer: letsencrypt
 spec:
   tls:
     - hosts:
       - datascience-notebook.k8s.shubhamtatvamasi.com
-      secretName: letsencrypt
+      secretName: datascience-notebook-tls
   rules:
     - host: datascience-notebook.k8s.shubhamtatvamasi.com
       http:
