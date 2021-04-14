@@ -27,7 +27,6 @@ kind: Ingress
 metadata:
   name: datascience-notebook
   annotations:
-    nginx.org/websocket-services: datascience-notebook
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
   tls:
